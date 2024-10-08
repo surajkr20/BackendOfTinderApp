@@ -23,6 +23,25 @@ app.get("/contact", (req, res) => {
     res.send("hello contact me.....");
 });
 
+// creating multiples routes
+app.use('/user',(req, res) =>{
+    res.send('i am from user')
+})
+
+app.get('/user',(req, res) =>{
+    res.send({firsname : 'suraj', lastName : 'kumar'})
+})
+
+app.post('/user',(req, res) =>{
+    console.log({firsname : 'suraj', lastName : 'kumar'})
+    res.send("user data")
+})
+
+app.delete('/user',(req, res) =>{
+    res.send("deleted successfully")
+})
+
+
 // Start the server and listen on port 3000
 app.listen(3000, () => {
     console.log("server started on port no 3000");
