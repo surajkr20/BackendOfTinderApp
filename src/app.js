@@ -17,6 +17,10 @@ app.post('/user/login', AdminAuth, (req, res) =>{
     res.send('congratulations your are successfully loged in')
 })
 
+app.get('/admin',(req, res) =>{
+    res.send("admin logged in successfully.......")
+})
+
 app.get('/admin/allData',(req, res) =>{
     // logic of checking if the request is authorized
     const token = 'xyz';
