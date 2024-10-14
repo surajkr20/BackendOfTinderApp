@@ -1,8 +1,8 @@
 // Import the express
 const express = require("express");
 
-// connectiong database
-require('./config/database')
+// a proper way of connectiong database
+const connectDB = require('./config/database')
 
 // Create an instance of express
 const app = express();

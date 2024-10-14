@@ -1,3 +1,4 @@
+// reqire mongoose
 const mongoose = require("mongoose");
 
 const connectDB = async () => {
@@ -6,7 +7,6 @@ const connectDB = async () => {
   );
 };
 
-
 connectDB()
   .then(() => {
     console.log("connection established successfully.....");
@@ -14,3 +14,5 @@ connectDB()
   .catch((err) => {
     console.error("connection can not established");
 });
+
+module.exports = connectDB;
